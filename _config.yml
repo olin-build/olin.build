@@ -2,3 +2,7 @@ exclude:
 - config.yml
 - Gemfile
 - README.md
+
+collections:
+  projects:
+    output: true
