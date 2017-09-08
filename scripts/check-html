@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -e # halt script on error
+
+bundle exec jekyll build
+
+bundle exec htmlproofer \
+  --assume-extension \
+  --check-html \
+  --empty-alt-ignore \
+  --report-missing-names \
+  --report-script-embeds \
+  "$@" \
+  ./_site
