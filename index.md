@@ -1,5 +1,7 @@
 # `olin.build`
 
-Olin Build hosts student software projects at Olin College.
+Olin.build facilitates and promotes student software projects at Olin College.
 
-Stay tuned...
+More coming soon.
+
+Interested? Join us at [olin-build.slack.com](http://olin-build.slack.com)
