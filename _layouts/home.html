@@ -29,29 +29,51 @@
       <div class="starter-template">
           {{ content }}
       </div>
-      <h3>projects:</h3>
+      <h3>projects</h3>
+      {% assign visited = '' | split: ',' %}
+      {% for cat in site.data.categories %}
+        <h4>community directories</h4>
+        <ul class="project-list">
+          {% assign projects = site.projects | where_exp: "project", "project.categories contains cat.key" %}
+          {% for project in projects %}
+          {% assign visited = visited | push: project %}
+            <li>
+              <div class="project-item">
+                {% if project.link %}
+                <a href="{{ project.link }}">
+                {% else %}
+                <a href="{{ post.url | relative_url }}">
+                {% endif %}
+                  <h3>{{ project.title }}</h2>
+                </a>
+                <span class="project-meta">
+                  {{ project.description }}
+                </span>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+      <h4>other</h4>
       <ul class="project-list">
         {% for project in site.projects %}
-            <li>
-                <div class="project-item">
-                  {% if project.link %}
-                  <a href="{{ project.link }}">
-                  {% else %}
-                  <a href="{{ post.url | relative_url }}">
-                  {% endif %}
-                    <h3>{{ project.title }}</h2>
-                  </a>
-                  <span class="project-meta">
-                    {{ project.description }}
-                  </span>
-                    {% assign project_content = project.content | strip_newlines %}
-                    {% if project_content != "" %}
-                    <p class="project-action"><a href="{{ project.url | relative_url }}">read more...</a></p>
-                    {% endif %}
-                </div>
-            </li>
+          {% if visited contains project %}{% continue %}{% endif %}
+          <li>
+            <div class="project-item">
+              {% if project.link %}
+              <a href="{{ project.link }}">
+              {% else %}
+              <a href="{{ post.url | relative_url }}">
+              {% endif %}
+                <h3>{{ project.title }}</h2>
+              </a>
+              <span class="project-meta">
+                {{ project.description }}
+              </span>
+            </div>
+          </li>
         {% endfor %}
-  </ul>
+    </ul>
     </div><!-- /.container -->
 
     <!-- Bootstrap core JavaScript

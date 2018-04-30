@@ -1,0 +1,4 @@
+- name: community directories
+  key: directory
+- name: digital signage
+  key: signage
