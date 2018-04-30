@@ -6,5 +6,6 @@
   key: signage
 - name: For Programmers
   key: programming
+# Other must come last. The Liquid code treats key `other` specially.
 - name: Other
   key: other

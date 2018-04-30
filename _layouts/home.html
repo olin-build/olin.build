@@ -42,6 +42,7 @@
         {% if projects.size == 0 %}{% continue %}{% endif %}
         <h3>{{ cat.name }}</h3>
         <ul class="project-list">
+          {% assign projects = projects | where_exp: 'project', 'project.order' | sort: 'order' | concat: projects | uniq %}
           {% for project in projects %}
             {% assign visited = visited | push: project %}
             <li>
