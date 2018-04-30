@@ -1,16 +1,20 @@
 @charset "utf-8";
-
 * {
-  font-family: 'courier';
+    font-family: 'courier';
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
-.project-list h3 {
-  list-style: none;
-   margin-left: 0;
-   padding-left: 1em;
-   text-indent: -1em;
+h2,
+h3 {
+    text-transform: lowercase;
+}
+
+.project-list h4 {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1em;
+    text-indent: -1em;
 }

@@ -24,15 +24,14 @@
   </head>
 
   <body>
-
     <div class="container">
       <div class="starter-template">
           {{ content }}
       </div>
-      <h3>projects</h3>
+      <h2>Projects</h2>
       {% assign visited = '' | split: ',' %}
       {% for cat in site.data.categories %}
-        <h4>community directories</h4>
+        <h3>{{ cat.name }}</h3>
         <ul class="project-list">
           {% assign projects = site.projects | where_exp: "project", "project.categories contains cat.key" %}
           {% for project in projects %}
@@ -44,7 +43,7 @@
                 {% else %}
                 <a href="{{ post.url | relative_url }}">
                 {% endif %}
-                  <h3>{{ project.title }}</h2>
+                <h4>{{ project.title }}</h4>
                 </a>
                 <span class="project-meta">
                   {{ project.description }}

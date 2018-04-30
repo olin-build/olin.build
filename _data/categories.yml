@@ -1,4 +1,4 @@
-- name: community directories
+- name: Community Directories
   key: directory
-- name: digital signage
+- name: Digital Signage
   key: signage
