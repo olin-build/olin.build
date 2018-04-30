@@ -1,8 +1,8 @@
-exclude:
-- config.yml
-- Gemfile
-- README.md
-
 collections:
   projects:
-    output: true
+    output: false
+
+exclude:
+  - Gemfile
+  - README.md
+  - scripts
