@@ -1,6 +1,7 @@
 ---
 title: FUTUREboard
 description: The digital signage of tomorrow, today!
-link: https://futureboard.olin.build
+website: https://futureboard.olin.build
+source: https://github.com/olinlibrary/futureboard
 categories: [abe, signage]
 ---

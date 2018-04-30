@@ -1,6 +1,7 @@
 ---
 title: Event Calendar
 description: The community calendar for Olin.
-link: https://events.olin.build
+website: https://events.olin.build
+source: https://github.com/olinlibrary/abe-web
 categories: [abe, calendar, directory]
 ---
