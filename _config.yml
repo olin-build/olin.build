@@ -1,3 +1,6 @@
+description: Olin.build hosts student-built projects at Olin College.
+author: Oliver Steele
+
 collections:
   projects:
     output: false
