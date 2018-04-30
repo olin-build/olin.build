@@ -31,9 +31,17 @@
       <h2>Projects</h2>
       {% assign visited = '' | split: ',' %}
       {% for cat in site.data.categories %}
+        {% assign projects = site.projects | where_exp: "project", "project.categories contains cat.key" %}
+        {% if cat.key == 'other' %}
+          {% assign projects = '' | split: ',' %}
+          {% for project in site.projects %}
+            {% if visited contains project %}{% continue %}{% endif %}
+            {% assign projects = projects | push: project %}
+          {% endfor %}
+        {% endif %}
+        {% if projects.size == 0 %}{% continue %}{% endif %}
         <h3>{{ cat.name }}</h3>
         <ul class="project-list">
-          {% assign projects = site.projects | where_exp: "project", "project.categories contains cat.key" %}
           {% for project in projects %}
             {% assign visited = visited | push: project %}
             <li>
@@ -53,33 +61,6 @@
           {% endfor %}
         </ul>
       {% endfor %}
-      {% assign other = '' | split: ',' %}
-      {% for project in site.projects %}
-        {% if visited contains project %}{% continue %}{% endif %}
-        { assign other = other | push: project %}
-      {% endfor %}
-      {% if other.size > 0 %}
-        <h3>other</h3>
-        <ul class="project-list">
-          {% for project in other %}
-            {% if visited contains project %}{% continue %}{% endif %}
-            <li>
-              <div class="project-item">
-                {% if project.link %}
-                  <a href="{{ project.link }}">
-                {% else %}
-                  <a href="{{ post.url | relative_url }}">
-                {% endif %}
-                  <h4>{{ project.title }}</h4>
-                </a>
-                <span class="project-meta">
-                  {{ project.description }}
-                </span>
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
     </div><!-- /.container -->
 
     <!-- Bootstrap core JavaScript
