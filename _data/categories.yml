@@ -1,5 +1,7 @@
 - name: Community Directories
   key: directory
+- name: Built With ABE
+  key: abe
 - name: Digital Signage
   key: signage
 - name: For Programmers
