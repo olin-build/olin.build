@@ -1,10 +1,10 @@
 ---
 title: ABE
-description: |
-    Amorphous Blob of Events (ABE) is an API and database for building interfaces and experiences around events at Olin.
 website: https://abe.olin.build
 source: https://github.com/olinlibrary/ABE
 categories: [abe, api, calendar, programming]
 order: 1
-status: active
+status: infastructure
 ---
+
+Amorphous Blob of Events (ABE) is an API for accessing community events. ABE is the data store behind the Olin Community Calendar.

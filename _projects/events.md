@@ -1,5 +1,5 @@
 ---
-title: Event Calendar
+title: Community Calendar
 description: The community calendar for Olin.
 website: https://events.olin.build
 source: https://github.com/olinlibrary/abe-web

@@ -28,10 +28,13 @@ layout: layout
         <div class="project-item">
           <h4>
             <a href="{{ project.website }}">{{ project.title }}</a>
-            <a class="source" href="{{ project.source }}">(source code)</a>
+            {% if project.source %}
+              <a class="source" href="{{ project.source }}">(source code)</a>
+            {% endif %}
           </h4>
           <span class="project-meta">
             {{ project.description }}
+            {{ project.content }}
           </span>
         </div>
       </li>

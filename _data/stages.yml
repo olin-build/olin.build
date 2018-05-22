@@ -5,10 +5,10 @@
     non-programmers.
 
 - name: Developer Services
-  key: active
+  key: infastructure
   description: >
-    Actively-maintained infrastructure projects, intended for use by
-    programmers.
+    Actively-maintained infrastructure projects. These projects are intended for use by
+    programmers, to build their own programs.
 
 - name: Under Development
   key: developed
