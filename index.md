@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: stages
 ---
 
 # `olin.build`

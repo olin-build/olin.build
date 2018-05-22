@@ -3,6 +3,11 @@
     font-family: 'courier';
 }
 
+.container {
+    max-width: 750px;
+    padding: auto;
+}
+
 ul {
     list-style-type: none;
 }
@@ -25,4 +30,12 @@ h4 .source {
 
 footer {
     border-top: 1px solid gray;
+}
+
+.featured.stage {
+    border: 1px solid gray;
+    border-radius: 5px;
+    background: #fff8ff;
+    padding: 0 10px;
+    margin: -10px;
 }
