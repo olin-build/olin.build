@@ -4,4 +4,5 @@ description: (WIP) Generate files for vinyl-cut signs that conform to the Olin L
 website: http://signyl.olin.build
 source: https://github.com/olinlibrary/signyl
 categories: [signage]
+status: retired
 ---

@@ -5,4 +5,5 @@ description: >
 website: https://info.olin.build
 source: https://github.com/olininfo/olininfo.github.io
 categories: [directory]
+status: featured
 ---

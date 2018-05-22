@@ -7,9 +7,8 @@ layout: layout
 </div>
 
 {% assign visited = '' | split: ',' %}
-{% assign categories = 'featured,other' | split: ',' %}
-{% for cat in categories %}
-  {% assign projects = site.projects | where_exp: "project", "project.featured" %}
+{% for cat in site.data.stages %}
+  {% assign projects = site.projects | where_exp: "project", "project.status == cat.key" %}
   {% if cat == 'other' %}
     {% assign projects = '' | split: ',' %}
     {% for project in site.projects %}
@@ -17,8 +16,10 @@ layout: layout
       {% assign projects = projects | push: project %}
     {% endfor %}
   {% endif %}
+  <br/>
   {% if projects.size == 0 %}{% continue %}{% endif %}
-  <h2>{{ cat }} projects</h2>
+  <h2>{{ cat.name }}</h2>
+  <p>{{ cat.description }}</p>
   <ul class="project-list">
     {% assign projects = projects | where_exp: 'project', 'project.order' | sort: 'order' | concat: projects | uniq %}
     {% for project in projects %}

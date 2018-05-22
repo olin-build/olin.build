@@ -5,5 +5,5 @@ description: >
 website: https://o.olin.build
 source: https://github.com/HALtheWise/o-links/
 categories: [directory]
-featured: true
+status: featured
 ---

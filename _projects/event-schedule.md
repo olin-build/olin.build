@@ -6,4 +6,5 @@ description: >
 website: https://event-schedule.olin.build
 source: https://github.com/osteele/abe-event-schedule
 categories: [abe, calendar]
+status: retired
 ---

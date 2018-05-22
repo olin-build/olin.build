@@ -1,0 +1,30 @@
+- name: Featured Projects
+  key: featured
+  description: >
+    Actively-maintained community-facing projects. These are intended for use by
+    non-programmers.
+
+- name: Developer Services
+  key: active
+  description: >
+    Actively-maintained infrastructure projects, intended for use by
+    programmers.
+
+- name: Under Development
+  key: developed
+  description: Up and coming?
+
+- name: Hall of Fame
+  key: retired
+  description: >
+    Things that are no longer great, but once were.
+    Look at these for inspiration, or if you're looking for
+    something to adopt.
+
+- name: Graveyard
+  key: graveyard
+  description: Things that never really got finished / polished.
+
+# Other must come last. The Liquid code treats key `other` specially.
+- name: Other
+  key: other

@@ -6,4 +6,5 @@ website: https://abe.olin.build
 source: https://github.com/olinlibrary/ABE
 categories: [abe, api, calendar, programming]
 order: 1
+status: active
 ---

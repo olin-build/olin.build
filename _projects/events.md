@@ -5,5 +5,5 @@ website: https://events.olin.build
 source: https://github.com/olinlibrary/abe-web
 categories: [abe, calendar, directory]
 order: 2
-featured: true
+status: featured
 ---
