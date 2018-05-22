@@ -6,11 +6,11 @@ layout: layout
   {{ content }}
 </div>
 
+<h2>Projects</h2>
 {% assign visited = '' | split: ',' %}
-{% assign categories = 'featured,other' | split: ',' %}
-{% for cat in categories %}
-  {% assign projects = site.projects | where_exp: "project", "project.featured" %}
-  {% if cat == 'other' %}
+{% for cat in site.data.categories %}
+  {% assign projects = site.projects | where_exp: "project", "project.categories contains cat.key" %}
+  {% if cat.key == 'other' %}
     {% assign projects = '' | split: ',' %}
     {% for project in site.projects %}
       {% if visited contains project %}{% continue %}{% endif %}
@@ -18,7 +18,7 @@ layout: layout
     {% endfor %}
   {% endif %}
   {% if projects.size == 0 %}{% continue %}{% endif %}
-  <h2>{{ cat }} projects</h2>
+  <h3>{{ cat.name }}</h3>
   <ul class="project-list">
     {% assign projects = projects | where_exp: 'project', 'project.order' | sort: 'order' | concat: projects | uniq %}
     {% for project in projects %}
@@ -37,3 +37,4 @@ layout: layout
     {% endfor %}
   </ul>
 {% endfor %}
+

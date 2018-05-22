@@ -1,7 +1,7 @@
 # `olin.build`
 
-Olin.build facilitates and promotes student software projects at Olin College
-of Engineering.
+Olin.build facilitates and promotes community software projects at the Olin
+College of Engineering.
 
 Projects hosted at the olin.build subdomain are known to have been created by
 members of the community, but aren't official institutional projects. An
