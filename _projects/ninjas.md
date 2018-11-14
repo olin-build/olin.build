@@ -1,6 +1,6 @@
 ---
 title: Code Ninjas
-website: https://olin-build.slack.come
+website: https://olin-build.slack.com
 categories: [programming]
 status: infastructure
 ---
